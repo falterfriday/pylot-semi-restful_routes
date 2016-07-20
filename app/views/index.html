@@ -16,13 +16,15 @@
   <tr> 
     <td>{{ product['name'] }}</td>
     <td>{{ product['description'] }}</td>
-    <td>{{ product['price'] }}</td>
-    <td><a href="/products/show/{{ product['id'] }}">Show</a></td>
-    <td><a href="/products/edit/{{ product['id'] }}">Edit</a></td>
-    <td><button action="/products/edit/{{ product['id'] }}">Remove</button></td>
+    <td>${{ product['price'] }}</td>
+    <td><a href="/products/show/{{ product['id'] }}">Show</a>&nbsp;|&nbsp;
+    <a href="/products/edit/{{ product['id'] }}">Edit</a>&nbsp;|&nbsp;
+    <form action="/products/delete/{{ product['id'] }}" method="POST" >
+    	<input type="submit" value="Remove"></td>
+  	</form>
   </tr>
   {% endfor %}
 </table>
-  <a href="#">Add a new product</a>
+  <a href="/products/new">Add a new product</a>
 </body>
 </html>
