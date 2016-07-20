@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Add a new product</h1>
-<form>
+<form action="/products/new/create" method="POST">
 	Name<br>
 	<input type="text" name="name"><br>	
 	Description<br>
@@ -14,7 +14,7 @@
 	Price<br>
 	<input type="text" name="price"><br>
 	<input type="submit" name="submit" value="Create">
-</form>
-<a href="#">Go back</a>
+</form><br>
+<a href="/products">Go back</a>
 </body>
 </html>
